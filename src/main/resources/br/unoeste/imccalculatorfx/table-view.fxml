@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane prefHeight="663.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.unoeste.imccalculatorfx.TableControl">
+   <center>
+      <TableView fx:id="tvHistorico" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="coNome" maxWidth="1.7976931348623157E308" prefWidth="-1.0" text="Nome" />
+          <TableColumn fx:id="coPeso" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Peso" />
+            <TableColumn fx:id="coAltura" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Altura" />
+            <TableColumn fx:id="coIMC" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="IMC" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>

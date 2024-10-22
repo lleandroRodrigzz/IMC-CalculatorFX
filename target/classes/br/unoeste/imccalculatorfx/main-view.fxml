@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.unoeste.imccalculatorfx.MainController">
+   <children>
+      <HBox maxHeight="40.0" minHeight="40.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: blue;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAbrirCalculadoraIMC" style="-fx-background-color: black;" text="Calculadora IMC" textFill="#00eaff">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" right="15.0" top="6.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onConsultarHistorico" style="-fx-background-color: black;" text="Histórico" textFill="#00eaff">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" right="15.0" top="6.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="663.0" prefWidth="657.0" style="-fx-background-color: Black;">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <children>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="510.0" text="IMC Calculator" textAlignment="CENTER" textFill="#0400ff">
+               <font>
+                  <Font name="System Bold Italic" size="54.0" />
+               </font>
+            </Label>
+              <TextField fx:id="tfNome" alignment="CENTER" prefHeight="38.0" prefWidth="510.0" promptText="Informe seu nome">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+              <Label text="Peso" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="18.0" />
+                  </font>
+                  <VBox.margin>
+                      <Insets top="40.0" />
+                  </VBox.margin>
+              </Label>
+              <Slider fx:id="slPeso" max="200.0" min="3.0" onMouseClicked="#onPesoMouseClick" onMouseDragged="#onPesoMouseDragged" value="60.0" />
+              <Label fx:id="lbPeso" text="60" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="18.0" />
+                  </font>
+              </Label>
+              <Label layoutX="271.0" layoutY="280.0" text="Altura (Metros)" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="18.0" />
+                  </font>
+                  <VBox.margin>
+                      <Insets top="40.0" />
+                  </VBox.margin>
+              </Label>
+              <Slider fx:id="slAltura" layoutX="30.0" layoutY="317.0" max="230.0" min="40.0" onMouseClicked="#onAlturaMouseClick" onMouseDragged="#onAlturaMouseDragged" value="160.0" />
+              <Label fx:id="lbAltura" layoutX="271.0" layoutY="352.0" text="1.6" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="18.0" />
+                  </font>
+              </Label>
+              <Label fx:id="lbIMC" alignment="CENTER" contentDisplay="CENTER" layoutX="272.0" layoutY="224.0" prefHeight="114.0" prefWidth="158.0" text="-/-" textAlignment="CENTER" textFill="#09ff00">
+                  <font>
+                      <Font name="System Bold Italic" size="78.0" />
+                  </font>
+                  <VBox.margin>
+                      <Insets top="25.0" />
+                  </VBox.margin>
+              </Label>
+              <Label fx:id="lbCondicao" layoutX="272.0" layoutY="425.0" text="-/-" textFill="#00ff09">
+                  <font>
+                      <Font name="System Bold Italic" size="57.0" />
+                  </font>
+              </Label>
+              <Hyperlink fx:id="hpSalvarHistorico" onAction="#onSalvarHistorico" text="Clique aqui para armazenar os valores" textAlignment="CENTER" textFill="#0400ff">
+                  <font>
+                      <Font name="System Bold Italic" size="18.0" />
+                  </font>
+                  <VBox.margin>
+                      <Insets top="25.0" />
+                  </VBox.margin>
+              </Hyperlink>
+          </children>
+      </VBox>
+   </children>
+</VBox>
